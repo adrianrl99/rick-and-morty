@@ -14,6 +14,8 @@
 		FA0950262926088700CCDA42 /* rick_and_mortyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0950252926088700CCDA42 /* rick_and_mortyTests.swift */; };
 		FA0950302926088700CCDA42 /* rick_and_mortyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA09502F2926088700CCDA42 /* rick_and_mortyUITests.swift */; };
 		FA0950322926088700CCDA42 /* rick_and_mortyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0950312926088700CCDA42 /* rick_and_mortyUITestsLaunchTests.swift */; };
+		FA0950402926095C00CCDA42 /* RickMortySwiftApi in Frameworks */ = {isa = PBXBuildFile; productRef = FA09503F2926095C00CCDA42 /* RickMortySwiftApi */; };
+		FA54A18F29292D7700E8816F /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = FA54A18E29292D7700E8816F /* CachedAsyncImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		FA09502B2926088700CCDA42 /* rick-and-mortyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "rick-and-mortyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA09502F2926088700CCDA42 /* rick_and_mortyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rick_and_mortyUITests.swift; sourceTree = "<group>"; };
 		FA0950312926088700CCDA42 /* rick_and_mortyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rick_and_mortyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FAA8C2C129272D94008065B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FAA8C2C3292736C2008065B0 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA0950402926095C00CCDA42 /* RickMortySwiftApi in Frameworks */,
+				FA54A18F29292D7700E8816F /* CachedAsyncImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +85,7 @@
 				FA0950242926088700CCDA42 /* rick-and-mortyTests */,
 				FA09502E2926088700CCDA42 /* rick-and-mortyUITests */,
 				FA0950112926088400CCDA42 /* Products */,
+				FAA8C2C2292736C2008065B0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +102,7 @@
 		FA0950122926088400CCDA42 /* rick-and-morty */ = {
 			isa = PBXGroup;
 			children = (
+				FAA8C2C129272D94008065B0 /* Info.plist */,
 				FA0950132926088400CCDA42 /* rick_and_mortyApp.swift */,
 				FA0950152926088400CCDA42 /* ContentView.swift */,
 				FA0950172926088600CCDA42 /* Assets.xcassets */,
@@ -129,6 +137,14 @@
 			path = "rick-and-mortyUITests";
 			sourceTree = "<group>";
 		};
+		FAA8C2C2292736C2008065B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FAA8C2C3292736C2008065B0 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -145,6 +161,10 @@
 			dependencies = (
 			);
 			name = "rick-and-morty";
+			packageProductDependencies = (
+				FA09503F2926095C00CCDA42 /* RickMortySwiftApi */,
+				FA54A18E29292D7700E8816F /* CachedAsyncImage */,
+			);
 			productName = "rick-and-morty";
 			productReference = FA0950102926088400CCDA42 /* rick-and-morty.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +237,10 @@
 				Base,
 			);
 			mainGroup = FA0950072926088400CCDA42;
+			packageReferences = (
+				FA09503E2926095C00CCDA42 /* XCRemoteSwiftPackageReference "Rick-and-Morty-Swift-API" */,
+				FA54A18D29292D7700E8816F /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+			);
 			productRefGroup = FA0950112926088400CCDA42 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -419,6 +443,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "rick-and-morty/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Rick and Morty";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -437,10 +463,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "site.adrianlopez.rick-and-morty";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -457,6 +484,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "rick-and-morty/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Rick and Morty";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -475,10 +504,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "site.adrianlopez.rick-and-morty";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -612,6 +642,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FA09503E2926095C00CCDA42 /* XCRemoteSwiftPackageReference "Rick-and-Morty-Swift-API" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/benjaminbruch/Rick-and-Morty-Swift-API";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		FA54A18D29292D7700E8816F /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FA09503F2926095C00CCDA42 /* RickMortySwiftApi */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA09503E2926095C00CCDA42 /* XCRemoteSwiftPackageReference "Rick-and-Morty-Swift-API" */;
+			productName = RickMortySwiftApi;
+		};
+		FA54A18E29292D7700E8816F /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA54A18D29292D7700E8816F /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FA0950082926088400CCDA42 /* Project object */;
 }
