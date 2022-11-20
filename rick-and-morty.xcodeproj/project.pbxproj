@@ -16,6 +16,8 @@
 		FA0950322926088700CCDA42 /* rick_and_mortyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0950312926088700CCDA42 /* rick_and_mortyUITestsLaunchTests.swift */; };
 		FA0950402926095C00CCDA42 /* RickMortySwiftApi in Frameworks */ = {isa = PBXBuildFile; productRef = FA09503F2926095C00CCDA42 /* RickMortySwiftApi */; };
 		FA54A18F29292D7700E8816F /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = FA54A18E29292D7700E8816F /* CachedAsyncImage */; };
+		FA54A1912929F6E300E8816F /* InfoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54A1902929F6E300E8816F /* InfoCardView.swift */; };
+		FA54A199292A049400E8816F /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54A198292A049400E8816F /* SearchBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		FA09502B2926088700CCDA42 /* rick-and-mortyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "rick-and-mortyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA09502F2926088700CCDA42 /* rick_and_mortyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rick_and_mortyUITests.swift; sourceTree = "<group>"; };
 		FA0950312926088700CCDA42 /* rick_and_mortyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rick_and_mortyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FA54A1902929F6E300E8816F /* InfoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCardView.swift; sourceTree = "<group>"; };
+		FA54A198292A049400E8816F /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		FAA8C2C129272D94008065B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		FAA8C2C3292736C2008065B0 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -108,6 +112,8 @@
 				FA0950172926088600CCDA42 /* Assets.xcassets */,
 				FA0950192926088600CCDA42 /* rick_and_morty.entitlements */,
 				FA09501A2926088600CCDA42 /* Preview Content */,
+				FA54A1902929F6E300E8816F /* InfoCardView.swift */,
+				FA54A198292A049400E8816F /* SearchBarView.swift */,
 			);
 			path = "rick-and-morty";
 			sourceTree = "<group>";
@@ -283,7 +289,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA54A199292A049400E8816F /* SearchBarView.swift in Sources */,
 				FA0950162926088400CCDA42 /* ContentView.swift in Sources */,
+				FA54A1912929F6E300E8816F /* InfoCardView.swift in Sources */,
 				FA0950142926088400CCDA42 /* rick_and_mortyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
